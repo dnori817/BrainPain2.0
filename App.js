@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 import Navigation from './components/Navigation';
@@ -11,21 +11,22 @@ export default class App extends React.Component {
       super(props);
       this.state = {
         quiz: [],
-        quizCat: ''
+        // quizCat: ''
       }
     }
 
     componentWillMount(){
       api.getQuiz().then((res) => {
         this.setState({
-            quiz: res.quiz.results,
-            quizCat: res.quiz.results[0].category
+            quiz: res.results,
+            question: res.results[0].question
         })
       });
     }
 
 
   render() {
+    console.log("Quiz: ", this.state.quiz);
     return (
       <View>
 
@@ -40,7 +41,7 @@ export default class App extends React.Component {
         />
 
       <Text>
-        Quiz: {this.state.quizCat}
+        Question: {this.state.question}
       </Text>
       </View>
     );

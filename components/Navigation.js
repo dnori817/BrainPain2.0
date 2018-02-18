@@ -6,7 +6,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <View style={styles.navigation}>
-        <Text>
+        <Text style={styles.title}>
           BrainPain
         </Text>
 
@@ -16,11 +16,15 @@ export default class Navigation extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  navigation: {
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '200px',
+    height: 70,
   },
+
+  title: {
+    fontSize: 30,
+
+  }
 });
