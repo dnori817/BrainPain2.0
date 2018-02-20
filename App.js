@@ -40,7 +40,7 @@ export default class App extends React.Component {
           accessibilityLabel="Learn more about this purple button"
         />
 
-      <Text>
+      <Text >
         Question: {this.state.question}
       </Text>
       </View>

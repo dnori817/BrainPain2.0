@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 70,
+    height: 110,
   },
 
   title: {
-    fontSize: 30,
+    fontSize: 80,
 
   }
 });
