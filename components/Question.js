@@ -44,5 +44,52 @@ export default class Question extends Component {
     )
   }
 
-  renderAnswer = (answer)
+  renderAnswer = (answer) => {
+    const { hasAnswered, isCorrect, answerSelected } = this.state;
+
+    if (!hasAnswered) {
+      return (
+        <View>
+        </View>
+      );
+    }
+
+
+    return (
+      <View>
+      </View>
+    );
+  }
+
+  selectAnswer = (selected) => {
+    let isCorrect = true;
+    if (selected === this.props.question.correct_answer) {
+      this.setState({
+        hasAnswered: true,
+        isCorrect: true,
+        answerSelected: selected
+      });
+    } else {
+      isCorrect = false;
+      this.setState({
+        hasAnswered: true,
+        isCorrect: false,
+        answerSelected: selected
+      });
+    }
+    this.props.answerSelected(isCorrect);
+  }
+
+  // Fisher-Yates shuffle algorithm
+	shuffle = (array) => {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			const temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+		}
+		return array;
+	}
 }
+
+export default Question;
