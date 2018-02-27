@@ -33,12 +33,14 @@ export default class Question extends Component {
   }
 
   render() {
-    const { question } = this.props.question;
 
+
+    const { question } = this.props.question;
+    console.log(this.props.question)
     return (
       <View>
         <Text>
-
+          {this.state.answerList.map(this.renderAnswer)}
         </Text>
       </View>
     )
@@ -91,5 +93,3 @@ export default class Question extends Component {
 		return array;
 	}
 }
-
-export default Question;
