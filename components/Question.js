@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { FlatList, StyleSheet, Text, View, Button } from 'react-native';
 
 export default class Question extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export default class Question extends Component {
       hasAnswered: false,
       isCorrect: false,
       answerSelected: '',
-      answerList,
+      answerList
     };
   }
 
@@ -27,7 +27,7 @@ export default class Question extends Component {
         hasAnswered: false,
         isCorrect: false,
         answerSelected: '',
-        answerList,
+        answerList
       });
     }
   }
@@ -36,7 +36,7 @@ export default class Question extends Component {
 
 
     const { question } = this.props.question;
-    console.log(this.props.question)
+
     return (
       <View>
         <Text>
@@ -52,6 +52,7 @@ export default class Question extends Component {
     if (!hasAnswered) {
       return (
         <View>
+
         </View>
       );
     }
