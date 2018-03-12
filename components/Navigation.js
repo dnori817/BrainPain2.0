@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import Category from './Category';
+
 
 export default class Navigation extends Component {
 
@@ -9,6 +11,7 @@ export default class Navigation extends Component {
         <Text style={styles.title}>
           BrainPain
         </Text>
+
 
       </View>
     )
